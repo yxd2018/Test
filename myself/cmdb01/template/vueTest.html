@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block titile %}
+    学神CMDB_Vue
+{% endblock %}
+
+{% block style %}
+{#    <script src="/static/vendor/jquery/jquery.min.js"></script>#}
+    <script src="/static/vendor/jquery/vue.js"></script>
+{% endblock %}
+
+{% block label %}
+    vueTest
+{% endblock %}
+
+{% block content %}
+    {% verbatim myblock %}
+    <!-- 基本的vue
+        <div id="test">
+            {{ message }}
+        </div>
+        <script>
+        var test = new Vue(
+            {
+                el:"#test",
+                data:{
+                    message:'基本的vue',
+                }
+            }
+        )
+        </script>
+        -->
+    <!-- 基本的vue循环
+        <div id="test">
+            {{ message }}
+            <ul v-for="project in projects">
+                <li>
+                    {{ project.name }}
+                </li>
+            </ul>
+        </div>
+
+        <script>
+        var test = new Vue(
+            {
+                el:"#test",
+                data:{
+                    message:"基本的vue循环",
+                    projects:[
+                        {"name":"while"},
+                        {"name":"django"},
+                        {"name":"json"},
+                        {"name":"head"},
+                        {"name":"mk"},
+                    ]
+                }
+            }
+        )
+        </script>
+        -->
+        <!-- 基本的vue函数绑定
+        <div id="test">
+            <p v-on:click="ourTest">
+                {{ message }}
+            </p>
+        </div>
+        <script>
+            new Vue(
+                {
+                    el:"#test",
+                    data: {
+                        message: "基本的vue函数绑定",
+                    },
+                    methods:{
+                        ourTest:function () {
+                            alert('Hello World!')
+                        }
+                    }
+                }
+            )
+        </script>
+        -->
+        <!-- 基本的vue双向绑定 -->
+        <div id="test">
+            <input type="text" v-model="message">
+            <p>
+                {{ message }}
+            </p>
+        <script>
+            new Vue(
+                {
+                    el:"#test",
+                    data:{
+                        message:"基本的vue双向绑定",
+                    }
+                }
+            )
+        </script>
+        </div>
+    {% endverbatim myblock%}
+{% endblock %}

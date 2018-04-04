@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block title %}
+企业简介
+{% endblock %}
+
+{% block content %}
+    <div id="wrap">
+        <!-- wrapper -->
+        <div id="sidebar">
+            <!-- the  sidebar -->
+            <!-- logo -->
+            <a href="#" id="logo"> <img src="/static/images/logo.png" alt="" /></a>
+            <!-- navigation menu -->
+            <ul id="navigation">
+              <li><a href="#industries">Industries</a></li>
+            </ul>
+        </div>
+        <div id="container" style="height: 630px">
+            <!-- page container -->
+            <div class="page" id="industries">
+                <!-- page industries -->
+                <h3 class="page_title"> {{ content.title }}</h3>
+                <div class="page_content">
+                    <p style="font-size: 16px">{{ content.description |safe}}</p>
+                    <div class="space"> </div>
+                    <div class="clear"> </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        <div class="footer" style="margin-top: 290px; ">
+            <p> &copy; 2017 . Some Rights Reserved.</p>
+            <p> More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">学神教育</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">学无止境</a></p>
+        </div>
+        </div></div>
+
+{% endblock %}
